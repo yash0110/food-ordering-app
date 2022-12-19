@@ -25,4 +25,8 @@ const DUMMY_MEALS = [
     },
   ];
 
+export const getItemByID = (itemID) => {
+    return DUMMY_MEALS.find(item => item.id === itemID);
+}
+
   export default DUMMY_MEALS;

@@ -1,14 +1,16 @@
-import DUMMY_MEALS from "../constants/dummy-meals"
+import DUMMY_MEALS from "../../store/dummy-meals"
 import MealItem from "./MealItem";
 import Card from '../UI/Card'
 
 const MealList = (props) => {
 
-    const MealListDisplay = DUMMY_MEALS.map((item) => <MealItem item={item} />);
+    const MealListDisplay = DUMMY_MEALS.map((item) => <MealItem key={item.id} item={item} />);
 
     return (
         <Card>
-            {MealListDisplay}
+            <ul>
+                {MealListDisplay}
+            </ul>
         </Card>
     );
 }

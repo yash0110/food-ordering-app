@@ -1,10 +1,14 @@
 import '../../css/Input.css'
 
 const Input = (props) => {
+    const onChangeHandler = (event) => {
+        props.onChange(event.target.value);
+    }
+
     return (
         <div className='input'>
             <label>{props.label}</label>
-            <input value={props.value}/>
+            <input onChange={onChangeHandler} {...props.input}/>
         </div>
     );
 }

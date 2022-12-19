@@ -1,20 +1,21 @@
+import React from 'react';
 import Header from './components/Header/Header'
-import MealsSummary from './components/constants/MealsSummary'
+import MealsSummary from './components/MealsSummary'
 import MealList from './components/Meals/MealList';
 
 import './css/Header.css'
 
 function App() {
-  return (
-    <div>
-        <Header />
-        <div className='main-image'>
-            <img src={require('./images/meals.jpg')} alt='Meals' />
-        </div>
-        <MealsSummary />
-        <MealList />
-    </div>
-  );
+    return (
+        <React.Fragment> 
+            <Header />
+            <div className='main-image'>
+                <img src={require('./images/meals.jpg')} alt='Meals' />
+            </div>
+            <MealsSummary />
+            <MealList />
+        </React.Fragment>
+    );
 }
 
 export default App;
